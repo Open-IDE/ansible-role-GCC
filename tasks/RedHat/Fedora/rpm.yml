@@ -1,7 +1,9 @@
 ---
-- name: Install GCC Compiler
-  become: true
+- name: Install GNU C++ Compiler
   ansible.builtin.dnf:
     name:
-      - gcc
+      - gcc # C compiler
+      - gpp # C++ compiler
+      - g++ # linker
     state: latest
+  become: true

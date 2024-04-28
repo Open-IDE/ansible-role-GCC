@@ -1,0 +1,7 @@
+---
+- name: Install GCC Compiler
+  become: true
+  ansible.builtin.dnf:
+    name:
+      - gcc
+    state: latest
