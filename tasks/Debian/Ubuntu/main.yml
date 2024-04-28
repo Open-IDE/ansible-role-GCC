@@ -1,0 +1,6 @@
+---
+- name: Install GNU C Compiler for Linker
+  ansible.builtin.apt:
+    pkg:
+    - gcc
+  become: true

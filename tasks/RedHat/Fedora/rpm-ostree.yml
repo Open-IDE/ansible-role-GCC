@@ -1,0 +1,10 @@
+- name: Install GCC Compiler
+  community.general.rpm_ostree_pkg:
+    name: "{{ item }}"
+    state: present
+  loop:
+  - gcc
+  become: true
+  notify:
+  - Reboot
+
